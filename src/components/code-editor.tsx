@@ -19,7 +19,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
     monacoEditor.getModel()?.updateOptions({ tabSize: 2 });
   };
   const onFormatClick = () => {
-    const unformatted = editorRef.current.gotModel().getValue();
+    const unformatted = editorRef.current.getModel().getValue();
     //Get current value
     //Format value
     const formatted = prettier.format(unformatted, {
